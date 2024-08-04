@@ -1,5 +1,5 @@
 import "./Header.css";
-import pfp from "../../assets/pfp.jpg";
+import Pfp from "../../assets/Pfp.jpg";
 import Logo from "../../assets/Logo.svg";
 import Addbase from "../../assets/Addbase.svg";
 
@@ -24,7 +24,7 @@ export default function Header({ handleAddClick, weatherData }) {
       <div className="header__user-container">
         <p className="header__user-name">Alex Sturm</p>
         <img
-          src={pfp}
+          src={Pfp}
           alt="User profile picture"
           className="header__user-pfp"
         />
