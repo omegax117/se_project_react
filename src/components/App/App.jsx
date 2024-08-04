@@ -5,8 +5,8 @@ import Main from "../Main/Main";
 import { useEffect, useState } from "react";
 import { ModalWithForm } from "../ModalWithForm/ModalWithForm";
 import { ItemModal } from "../ItemModal/ItemModal";
-import { getWeather, parseWeatherData } from "../../utils/weatherApi.jsx";
-import { coordinates, APIkey } from "../../utils/constants";
+import { getWeather, parseWeatherData } from "../../utils/WeatherApi.jsx";
+import { coordinates, APIkey } from "../../utils/Constants.js";
 
 function App() {
   const [weatherData, setWeatherData] = useState({

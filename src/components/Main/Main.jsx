@@ -1,7 +1,7 @@
 import "./Main.css";
 import "./WeatherCard/WeatherCard";
 import WeatherCard from "./WeatherCard/WeatherCard";
-import { defaultClothingItems } from "../../utils/constants";
+import { defaultClothingItems } from "../../utils/Constants";
 import { ItemCard } from "./ItemCard/ItemCard";
 import { Footer } from "../Footer/Footer";
 import { ModalWithForm } from "../ModalWithForm/ModalWithForm";
