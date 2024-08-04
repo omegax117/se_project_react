@@ -48,7 +48,7 @@ function App() {
         activeModal={activeModal}
         closeActiveModal={closeActiveModal}
       >
-        <label htmlFor="name" className="modal__label">
+        <label htmlFor="Name" className="modal__label">
           Name <input type="text" placeholder="Name" className="modal__input" />
         </label>
         <label htmlFor="imageUrl" className="modal__label">
