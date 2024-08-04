@@ -1,5 +1,5 @@
 import "./ModalWithForm.css";
-import addbase from "../../assets/addbase.svg";
+import Addbase from "../../assets/Addbase.svg";
 
 export function ModalWithForm({
   children,
@@ -23,7 +23,7 @@ export function ModalWithForm({
           ></button>
           {children}
           <button className="modal__submit" type="submit">
-            <img src={addbase} alt="" />
+            <img src={Addbase} alt="" />
           </button>
         </form>
       </div>
