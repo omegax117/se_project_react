@@ -1,4 +1,4 @@
-import "./itemModal.css";
+import "./ItemModal.css";
 
 export function ItemModal({ activeModal, card, closeActiveModal }) {
   return (
