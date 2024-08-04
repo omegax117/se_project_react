@@ -49,13 +49,7 @@ function App() {
         closeActiveModal={closeActiveModal}
       >
         <label htmlFor="name" className="modal__label">
-          Name{" "}
-          <input
-            type="text"
-            placeholder="Name"
-            className="modal__input"
-            id="name"
-          />
+          Name <input type="text" placeholder="Name" className="modal__input" />
         </label>
         <label htmlFor="imageUrl" className="modal__label">
           Name{" "}
