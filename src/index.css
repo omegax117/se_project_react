@@ -1,0 +1,10 @@
+@import url(../src/vendor/normalize.css);
+@import url(../src/vendor/Fonts.css);
+@import url(../src/vendor/Fonts/WEB/css/cabinet-grotesk.css);
+@import url(../src/components/Footer/Footer.css);
+@import url(../src/components/Header/Header.css);
+@import url(../src/components/ItemModal/itemModal.css);
+@import url(../src/components/Main/Main.css);
+@import url(../src/components/Main/ItemCard/ItemCard.css);
+@import url(../src/components/Main/WeatherCard/WeatherCard.css);
+@import url(../src/components/ModalWithForm/ModalWithForm.css);

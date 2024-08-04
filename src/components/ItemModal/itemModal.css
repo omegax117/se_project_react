@@ -1,0 +1,61 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0000004d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  z-index: 1;
+  background: url("../../assets/Union.svg") transparent center no-repeat;
+  height: 16px;
+  width: 16px;
+  border: none;
+}
+
+.modal__opened {
+  visibility: visible;
+  opacity: 100%;
+}
+
+.modal__content-img {
+  background-color: #fff;
+  position: relative;
+  padding: 0;
+  max-width: 498px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 610px;
+  border-radius: 16px;
+}
+
+.modal__image {
+  height: 498px;
+  width: 498px;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border-radius: 16px;
+}
+
+.modal__footer {
+  position: relative;
+  margin: 515px 0 0 20px;
+}
+
+.modal__caption {
+}
+
+.modal__weather {
+}

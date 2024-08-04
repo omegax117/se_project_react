@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  font-family: cabinetgrotesk-bold, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 39.68px;
+  margin-right: 24px;
+  width: 89px;
+  height: 40px;
+}
+
+.header__info {
+}
+
+.header__add-clothes-btn {
+  font-family: cabinetgrotesk-bold, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 20px 0 auto;
+  border: none;
+  transition: 0.2s;
+}
+
+.header__add-clothes-btn:hover {
+  opacity: 80%;
+}
+
+.header__user-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__user-name {
+  font-family: cabinetgrotesk-bold, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.header__user-pfp {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}

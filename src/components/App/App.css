@@ -1,0 +1,12 @@
+@import url(../../index.css);
+@import url(../../vendor/Fonts/WEB/css/cabinet-grotesk.css);
+
+.App {
+  font-family: cabinetgrotesk-bold, Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+.App__content {
+  max-width: 1360px;
+  margin: 0 auto;
+}
