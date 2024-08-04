@@ -19,6 +19,7 @@ export function ModalWithForm({
             type="button"
             onClick={closeActiveModal}
             className="modal__close"
+            id="close-btn"
           ></button>
           {children}
           <button className="modal__submit" type="submit">
