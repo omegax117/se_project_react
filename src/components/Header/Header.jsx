@@ -1,7 +1,7 @@
 import "./Header.css";
-import Pfp from "../../assets/Pfp.jpg";
-import Logo from "../../assets/Logo.svg";
-import Addbase from "../../assets/Addbase.svg";
+import Pfp from "../../Assets/Pfp.jpg";
+import Logo from "../../Assets/Logo.svg";
+import Addbase from "../../Assets/Addbase.svg";
 
 export default function Header({ handleAddClick, weatherData }) {
   const currentDate = new Date().toLocaleString("default", {

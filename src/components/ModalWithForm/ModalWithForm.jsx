@@ -1,5 +1,5 @@
 import "./ModalWithForm.css";
-import Addbase from "../../assets/Addbase.svg";
+import Addbase from "../../Assets/Addbase.svg";
 
 export function ModalWithForm({
   children,

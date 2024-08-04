@@ -1,4 +1,4 @@
-import Sunny from "../../../assets/Sunny.svg";
+import Sunny from "../../../Assets/Sunny.svg";
 import "../WeatherCard/WeatherCard.css";
 
 export default function WeatherCard({ weatherData }) {
