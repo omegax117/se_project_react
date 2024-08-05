@@ -1,7 +1,7 @@
 import "./Main.css";
-import WeatherCard from "./WeatherCard/WeatherCard";
+import WeatherCard from "../WeatherCard/WeatherCard.jsx";
 import { DefaultClothingItems } from "../../utils/Constants";
-import { ItemCard } from "./ItemCard/ItemCard";
+import { ItemCard } from "../ItemCard/ItemCard.jsx";
 import { Footer } from "../Footer/Footer";
 import { ModalWithForm } from "../ModalWithForm/ModalWithForm";
 

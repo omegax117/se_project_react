@@ -1,5 +1,5 @@
-import Sunny from "../../../Assets/Sunny.svg";
-import "../WeatherCard/WeatherCard.css";
+import Sunny from "../../Assets/Sunny.svg";
+import "./WeatherCard.css";
 
 export default function WeatherCard({ weatherData }) {
   return (
