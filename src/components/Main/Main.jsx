@@ -1,5 +1,4 @@
 import "./Main.css";
-import "./WeatherCard/WeatherCard";
 import WeatherCard from "./WeatherCard/WeatherCard";
 import { DefaultClothingItems } from "../../utils/Constants";
 import { ItemCard } from "./ItemCard/ItemCard";
