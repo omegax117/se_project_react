@@ -6,11 +6,11 @@ export function ItemCard({ item, onCardClick }) {
   };
   return (
     <li className="card">
-      <h2 className="card__name">{item.name}</h2>
+      <h2 className="card__name">{item.Name}</h2>
       <img
         onClick={handleCardClick}
         src={item.link}
-        alt={item.name}
+        alt={item.Name}
         className="card__img"
       />
     </li>

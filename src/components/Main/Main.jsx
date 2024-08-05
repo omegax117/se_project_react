@@ -15,7 +15,7 @@ export default function Main({ weatherData, handleCardClick }) {
         </p>
         <ul className="cards__list">
           {DefaultClothingItems.filter((item) => {
-            return item.weather === weatherData.type;
+            return item.Weather === weatherData.type;
           }).map((item) => {
             return (
               <ItemCard
