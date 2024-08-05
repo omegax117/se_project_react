@@ -1,8 +1,7 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is the se_project_react an intro website built using react and vite tools.
 
-Currently, two official plugins are available:
+This projects grabs weather at a (currently) coded location and provides helpful suggestions as to what would be wise to wear.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This item grabs an API from open source weather with a fetch request and renders the temperature and what suggestions it has.
