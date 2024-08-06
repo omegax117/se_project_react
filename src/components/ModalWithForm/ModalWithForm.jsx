@@ -2,7 +2,7 @@ import "./ModalWithForm.css";
 
 export function ModalWithForm({
   children,
-  buttonText,
+  ButtonText,
   title,
   closeActiveModal,
   isOpen,
@@ -20,7 +20,7 @@ export function ModalWithForm({
           />
           {children}
           <button className="modal__submit" type="submit">
-            {buttonText}
+            {ButtonText}
           </button>
         </form>
       </div>

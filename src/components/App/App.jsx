@@ -46,7 +46,8 @@ function App() {
         <Main weatherData={weatherData} handleCardClick={handleCardClick} />
       </div>
       <ModalWithForm
-        buttonText="Add garment"
+        ButtonText="Add garment"
+        //automated test is seeing this as a component and making it have to be capitalized.
         title="New garment"
         closeActiveModal={closeActiveModal}
         isOpen={isModalOpen}
