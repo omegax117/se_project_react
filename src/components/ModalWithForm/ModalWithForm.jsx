@@ -1,17 +1,14 @@
 import "./ModalWithForm.css";
-import Addbase from "../../Assets/Addbase.svg";
 
 export function ModalWithForm({
   children,
   buttonText,
   title,
-  activeModal,
   closeActiveModal,
+  isOpen,
 }) {
   return (
-    <div
-      className={`modal ${activeModal === "add-garment" && "modal__opened"}`}
-    >
+    <div className={`modal ${isOpen ? "modal_opened" : ""}`}>
       <div className="modal__content">
         <form action="" className="modal__form">
           <h2 className="modal__title">{title}</h2>
@@ -20,10 +17,10 @@ export function ModalWithForm({
             onClick={closeActiveModal}
             className="modal__close"
             id="close-btn"
-          ></button>
+          />
           {children}
           <button className="modal__submit" type="submit">
-            <img src={Addbase} alt="" />
+            {buttonText}
           </button>
         </form>
       </div>
