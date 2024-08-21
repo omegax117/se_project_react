@@ -2,7 +2,7 @@ import "./Header.css";
 import Pfp from "../../Assets/Pfp.jpg";
 import Logo from "../../Assets/Logo.svg";
 import Addbase from "../../Assets/Addbase.svg";
-import Switch from "./Switch/Switch";
+import Switch from "../Switch/Switch";
 import { Link } from "react-router-dom";
 
 export default function Header({ handleAddClick, weatherData }) {
