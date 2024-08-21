@@ -1,0 +1,20 @@
+.clothes-section {
+  max-width: 1015px;
+}
+
+.clothes-section__info {
+  display: flex;
+}
+
+.clothes-section__title {
+  margin-right: 20px;
+}
+
+.clothes-section__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  gap: 21px;
+}

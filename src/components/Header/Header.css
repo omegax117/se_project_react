@@ -21,7 +21,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  margin: 0 20px 0 auto;
+  margin: 0 20px 0 20px;
   border: none;
   transition: 0.2s;
 }
@@ -47,4 +47,9 @@
   border-radius: 50%;
   height: 40px;
   width: 40px;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #000;
 }

@@ -13,9 +13,14 @@ export const getWeather = ({ latitude, longitude }, APIkey) => {
 export const parseWeatherData = (data) => {
   const result = {};
   result.city = data.name;
-  result.temp = { F: data.main.temp };
-  result.type = getWeatherType(result.temp.F);
-
+  result.temp = data.main.temp;
+  result.type = getWeatherType(result.temp);
+  result.math = {
+    temp: {
+      F: Math.round(result.temp),
+      C: Math.round(((result.temp - 32) * 5) / 9),
+    },
+  };
   return result;
 };
 

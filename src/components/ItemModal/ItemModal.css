@@ -13,6 +13,11 @@
   opacity: 0;
 }
 
+.modal_opened {
+  visibility: visible;
+  opacity: 100%;
+}
+
 .modal__close {
   position: absolute;
   top: 20px;
@@ -22,11 +27,6 @@
   height: 16px;
   width: 16px;
   border: none;
-}
-
-.modal_opened {
-  visibility: visible;
-  opacity: 100%;
 }
 
 .modal__content-img {
@@ -49,13 +49,27 @@
   border-radius: 16px;
 }
 
+.modal__delete {
+  border: none;
+  margin: 0 0 0 auto;
+  background-color: transparent;
+  position: absolute;
+  left: 365px;
+  top: -1px;
+  transition: 0.3s;
+}
+
+.modal__delete:hover {
+  color: #ff4d00;
+}
+
 .modal__footer {
   position: relative;
   margin: 515px 0 0 20px;
 }
 
 .modal__caption {
-  /* pending update */
+  max-width: 100px;
 }
 
 .modal__weather {

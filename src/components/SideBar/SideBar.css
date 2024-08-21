@@ -1,0 +1,24 @@
+.sidebar {
+  display: flex;
+  max-width: 800px;
+}
+
+.sidebar__avatar {
+  border-radius: 50%;
+  height: 56px;
+  width: 56px;
+  margin: 0px 40px 16px 0px;
+}
+
+.sidebar__username {
+  margin: 20px 116px 0px 0px;
+}
+
+.clothes-section__add-button {
+  border: none;
+  transition: 0.2s;
+}
+
+.clothes-section__add-button:hover {
+  opacity: 60%;
+}
