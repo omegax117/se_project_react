@@ -11,7 +11,12 @@ import AddItemModal from "../AddItemModal/AddItemModal.jsx";
 import { Route, Routes } from "react-router-dom";
 import { Footer } from "../Footer/Footer.jsx";
 import { Profile } from "../Profile/Profile.jsx";
-import { getItems, postItem, deleteItem } from "../../utils/api.js";
+import {
+  getItems,
+  postItem,
+  deleteItem,
+  processServerRequest,
+} from "../../utils/api.js";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -20,22 +25,18 @@ function App() {
   });
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
   const [clothingItems, setClothingItems] = useState([]);
 
   const handleAddClick = () => {
     setActiveModal("add-garment");
-    setIsModalOpen(true);
   };
   const closeActiveModal = () => {
     setActiveModal("");
-    setIsModalOpen(false);
   };
   const handleCardClick = (card) => {
     setActiveModal("preview");
     setSelectedCard(card);
-    setIsModalOpen(true);
   };
 
   const handleToggleSwitchChange = () => {
@@ -54,7 +55,7 @@ function App() {
         setClothingItems([res, ...clothingItems]);
         closeActiveModal();
       })
-      .catch((err) => console.error(err));
+      .catch(processServerRequest);
   };
 
   const handleDeleteItem = (selectedCard) => {
@@ -66,7 +67,7 @@ function App() {
         setClothingItems(newClothingItems);
         closeActiveModal();
       })
-      .catch((err) => console.error(err));
+      .catch(processServerRequest);
   };
 
   useEffect(() => {
@@ -83,8 +84,23 @@ function App() {
       .then((data) => {
         setClothingItems(data);
       })
-      .catch((err) => console.error(err));
+      .catch(processServerRequest);
   }, []);
+
+  useEffect(() => {
+    if (!activeModal) return;
+
+    const handleEscClose = (e) => {
+      if (e.key === "Escape") {
+        closeActiveModal();
+      }
+    };
+    document.addEventListener("keydown", handleEscClose);
+
+    return () => {
+      document.removeEventListener("keydown", handleEscClose);
+    };
+  }, [activeModal]);
 
   return (
     <div className="App">
@@ -120,7 +136,7 @@ function App() {
         <AddItemModal
           onCloseModal={closeActiveModal}
           onAddItem={onAddItem}
-          isOpen={isModalOpen}
+          isOpen={activeModal === "add-garment"}
         />
         <ItemModal
           activeModal={activeModal}

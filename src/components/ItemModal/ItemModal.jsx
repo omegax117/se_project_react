@@ -10,7 +10,7 @@ export function ItemModal({
     handleDelete(card);
   };
   return (
-    <div className={`modal ${activeModal === "preview" && "modal__opened"}`}>
+    <div className={`modal ${activeModal === "preview" && "modal_opened"}`}>
       <div className="modal__content-img modal__content_type_image">
         <button onClick={closeActiveModal} className="modal__close"></button>
         <img src={card.imageUrl} alt={card.name} className="modal__image" />

@@ -31,4 +31,4 @@ function deleteItem(id) {
   }).then(processServerRequest);
 }
 
-export { getItems, postItem, deleteItem };
+export { getItems, postItem, deleteItem, processServerRequest };
