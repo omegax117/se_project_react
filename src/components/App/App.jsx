@@ -55,7 +55,7 @@ function App() {
         setClothingItems([res, ...clothingItems]);
         closeActiveModal();
       })
-      .catch(processServerRequest);
+      .catch(console.error);
   };
 
   const handleDeleteItem = (selectedCard) => {
@@ -67,7 +67,7 @@ function App() {
         setClothingItems(newClothingItems);
         closeActiveModal();
       })
-      .catch(processServerRequest);
+      .catch(console.error);
   };
 
   useEffect(() => {
@@ -84,7 +84,7 @@ function App() {
       .then((data) => {
         setClothingItems(data);
       })
-      .catch(processServerRequest);
+      .catch(console.error);
   }, []);
 
   useEffect(() => {
