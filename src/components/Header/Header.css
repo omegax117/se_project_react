@@ -16,7 +16,7 @@
 .header__info {
 }
 
-.header__add-clothes-btn {
+.header__add-btn {
   font-family: cabinetgrotesk-bold, Arial, sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -26,7 +26,7 @@
   transition: 0.2s;
 }
 
-.header__add-clothes-btn:hover {
+.header__add-btn:hover {
   opacity: 80%;
 }
 
@@ -47,6 +47,7 @@
   border-radius: 50%;
   height: 40px;
   width: 40px;
+  margin-left: 8px;
 }
 
 .header__link {

@@ -1,12 +1,16 @@
 import "./Main.css";
 import { WeatherCard } from "../WeatherCard/WeatherCard.jsx";
-import { DefaultClothingItems } from "../../utils/Constants";
 import { ItemCard } from "../ItemCard/ItemCard.jsx";
-import { Footer } from "../Footer/Footer";
 import { useContext } from "react";
 import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext.jsx";
 
-export default function Main({ weatherData, handleCardClick, clothingItems }) {
+export default function Main({
+  weatherData,
+  handleCardClick,
+  clothingItems,
+  onCardLike,
+  isLoggedIn = { isLoggedIn },
+}) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
   const temp = weatherData?.math?.temp?.[currentTemperatureUnit] || 999;
   return (
@@ -22,11 +26,14 @@ export default function Main({ weatherData, handleCardClick, clothingItems }) {
               return item.weather === weatherData.type;
             })
             .map((item) => {
+              console.log(item);
               return (
                 <ItemCard
                   key={item._id}
                   item={item}
                   onCardClick={handleCardClick}
+                  onCardLike={onCardLike}
+                  isLoggedIn={isLoggedIn}
                 />
               );
             })}

@@ -101,3 +101,11 @@
 .modal__radio-input {
   margin-right: 8px;
 }
+
+.modal__alt {
+  border: none;
+  background: none;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 24px 0 0 0;
+  display: flex;
+}

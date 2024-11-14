@@ -1,6 +1,12 @@
 .sidebar {
   display: flex;
   max-width: 800px;
+  flex-direction: column;
+  margin-left: 46px;
+}
+
+.sidebar__user-wrap {
+  display: flex;
 }
 
 .sidebar__avatar {
@@ -11,7 +17,14 @@
 }
 
 .sidebar__username {
-  margin: 20px 116px 0px 0px;
+  margin: 20px 40px 0px 0px;
+  text-wrap: wrap;
+}
+
+.sidebar__profile-btn {
+  border: none;
+  text-align: left;
+  margin: 20px 0 0 0;
 }
 
 .clothes-section__add-button {
