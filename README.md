@@ -8,4 +8,9 @@ This item grabs an API from open source weather with a fetch request and renders
 
 Runs a mock server that can accept add and deletion requests of clothing items
 
-TODO: Add mobile device support
+React source: https://github.com/omegax117/se_project_react
+Express source: https://github.com/omegax117/se_project_express
+
+TODO:
+Add mobile device support
+Add weather location based on members location
