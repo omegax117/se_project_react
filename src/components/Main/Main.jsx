@@ -26,7 +26,6 @@ export default function Main({
               return item.weather === weatherData.type;
             })
             .map((item) => {
-              console.log(item);
               return (
                 <ItemCard
                   key={item._id}

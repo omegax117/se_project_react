@@ -1,4 +1,3 @@
-import { DefaultClothingItems } from "../../utils/Constants";
 import "./ClothesSection.css";
 import { ItemCard } from "../ItemCard/ItemCard";
 import { useContext } from "react";

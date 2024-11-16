@@ -7,16 +7,9 @@ import { ItemModal } from "../ItemModal/ItemModal";
 import { getWeather, parseWeatherData } from "../../utils/WeatherApi.jsx";
 import { coordinates, APIkey } from "../../utils/Constants.js";
 import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext.jsx";
-import { AppContext } from "../../contexts/AppContext.jsx";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext.jsx";
 import AddItemModal from "../AddItemModal/AddItemModal.jsx";
-import {
-  Route,
-  Routes,
-  useNavigate,
-  Navigate,
-  useLocation,
-} from "react-router-dom";
+import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
 import { Footer } from "../Footer/Footer.jsx";
 import { Profile } from "../Profile/Profile.jsx";
 import { ProtectedRoute } from "../ProtectedRoute/ProtectedRoute.jsx";
@@ -97,7 +90,6 @@ function App() {
             .getUser(data.token)
             .then((user) => {
               setUserData(user);
-              console.log(user);
             })
             .finally(() => {
               navigate("/profile");
@@ -118,7 +110,7 @@ function App() {
 
   const onUpdateProfile = ({ name, avatar }) => {
     const jwt = localStorage.getItem("jwt");
-    auth.editProfile({ name, avatar }, jwt).then((res) => {
+    auth.editProfile({ name, avatar }, jwt).then(() => {
       setIsLoggedIn(true);
       setUserData((prevUser) => ({ ...prevUser, name, avatar }));
       closeActiveModal();
