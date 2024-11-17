@@ -2,7 +2,13 @@ import { useState } from "react";
 import { ModalWithForm } from "../ModalWithForm/ModalWithForm";
 import "./RegisterModal.css";
 
-const RegisterModal = ({ isOpen, onRegister, onCloseModal }) => {
+const RegisterModal = ({
+  isOpen,
+  onRegister,
+  onCloseModal,
+  switchModal,
+  isLoading,
+}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -31,12 +37,14 @@ const RegisterModal = ({ isOpen, onRegister, onCloseModal }) => {
 
   return (
     <ModalWithForm
-      ButtonText="Next"
+      ButtonText={isLoading ? "Saving..." : "Next"}
       //automated test is seeing this as a component and making it have to be capitalized.
       title="Sign up"
       closeActiveModal={onCloseModal}
       isOpen={isOpen}
       onSubmit={handleSubmit}
+      switchTitle={"Log in"}
+      switchModal={switchModal}
     >
       <label htmlFor="Email" className="modal__label">
         Email*{" "}
@@ -82,7 +90,6 @@ const RegisterModal = ({ isOpen, onRegister, onCloseModal }) => {
           onChange={handleUrlChange}
         />
       </label>
-      <button className="modal__alt">or Log in</button>
     </ModalWithForm>
   );
 };

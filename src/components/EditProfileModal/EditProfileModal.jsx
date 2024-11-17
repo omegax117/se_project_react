@@ -1,12 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ModalWithForm } from "../ModalWithForm/ModalWithForm";
 
-const EditProfileModal = ({ isOpen, onCloseModal, onUpdate }) => {
+const EditProfileModal = ({
+  isOpen,
+  onCloseModal,
+  onUpdate,
+  currentUser,
+  isLoading,
+}) => {
   const [name, setName] = useState("");
   const [avatar, setAvatar] = useState("");
 
   const handleNameChange = (e) => {
     setName(e.target.value);
+    console.log(currentUser);
   };
 
   const handleAvatarChange = (e) => {
@@ -16,13 +23,19 @@ const EditProfileModal = ({ isOpen, onCloseModal, onUpdate }) => {
   function handleSubmit(e) {
     e.preventDefault();
     onUpdate({ name, avatar });
-    setName("");
-    setAvatar("");
   }
+
+  useEffect(() => {
+    if (isOpen) {
+      setName(currentUser.name);
+      setAvatar(currentUser.avatar);
+      console.log(currentUser);
+    }
+  }, [isOpen]);
 
   return (
     <ModalWithForm
-      ButtonText="Next"
+      ButtonText={isLoading ? "Updating" : "Next"}
       //automated test is seeing this as a component and making it have to be capitalized.
       title="Edit Profile"
       closeActiveModal={onCloseModal}
@@ -34,19 +47,23 @@ const EditProfileModal = ({ isOpen, onCloseModal, onUpdate }) => {
         <input
           type="text"
           id="NewName"
-          placeholder="NewName"
+          placeholder="new name"
           className="modal__input"
+          minLength={2}
+          maxLength={40}
           value={name}
           onChange={handleNameChange}
         />
       </label>
       <label htmlFor="NewAvatar" className="modal__label">
-        Avatar{" "}
+        Avatar*{" "}
         <input
           type="url"
           id="NewAvatar"
-          placeholder="URL"
+          placeholder="url"
           className="modal__input"
+          minLength={2}
+          maxLength={250}
           value={avatar}
           onChange={handleAvatarChange}
         />

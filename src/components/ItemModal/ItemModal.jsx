@@ -1,11 +1,15 @@
 import "./ItemModal.css";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import { useContext } from "react";
 
 export function ItemModal({
   activeModal,
   card,
   closeActiveModal,
   handleDelete,
+  isLoggedIn,
 }) {
+  const user = useContext(CurrentUserContext);
   const handleDeleteClick = () => {
     handleDelete(card);
   };
@@ -16,9 +20,13 @@ export function ItemModal({
         <img src={card.imageUrl} alt={card.name} className="modal__image" />
         <div className="modal__footer">
           <p className="modal__caption">{card.name}</p>
-          <button className="modal__delete" onClick={handleDeleteClick}>
-            Delete Item
-          </button>
+          {card.owner === user._id ? (
+            <button className="modal__delete" onClick={handleDeleteClick}>
+              Delete Item
+            </button>
+          ) : (
+            ""
+          )}
           <p className="modal__weather">Weather: {card.weather}</p>
         </div>
       </div>

@@ -1,5 +1,4 @@
-import { baseUrl, headers } from "./api";
-import { processServerRequest } from "./api";
+import { baseUrl, headers, processServerRequest } from "./api";
 
 const register = ({ name, avatar, email, password }) => {
   return fetch(`${baseUrl}/signup`, {
@@ -30,7 +29,7 @@ const editProfile = ({ name, avatar }, token) => {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
-      authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${token}`,
     },
   }).then(processServerRequest);
 };

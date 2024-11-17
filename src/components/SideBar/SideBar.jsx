@@ -1,4 +1,3 @@
-import Pfp from "../../Assets/Pfp.jpg";
 import "../SideBar/SideBar.css";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import { useContext, useState } from "react";

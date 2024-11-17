@@ -9,7 +9,7 @@ export default function Main({
   handleCardClick,
   clothingItems,
   onCardLike,
-  isLoggedIn = { isLoggedIn },
+  isLoggedIn,
 }) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
   const temp = weatherData?.math?.temp?.[currentTemperatureUnit] || 999;

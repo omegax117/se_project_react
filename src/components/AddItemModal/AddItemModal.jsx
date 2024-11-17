@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ModalWithForm } from "../ModalWithForm/ModalWithForm";
 import "./AddItemModal.css";
 
-const AddItemModal = ({ isOpen, onAddItem, onCloseModal }) => {
+const AddItemModal = ({ isOpen, onAddItem, onCloseModal, isLoading }) => {
   const [name, setName] = useState("");
   const [link, setUrl] = useState("");
   const [type, setType] = useState("");
@@ -29,18 +29,18 @@ const AddItemModal = ({ isOpen, onAddItem, onCloseModal }) => {
 
   return (
     <ModalWithForm
-      ButtonText="Add garment"
+      ButtonText={isLoading ? "Saving..." : "Add Item"}
       //automated test is seeing this as a component and making it have to be capitalized.
       title="New garment"
       closeActiveModal={onCloseModal}
       isOpen={isOpen}
       onSubmit={handleSubmit}
     >
-      <label htmlFor="name" className="modal__label">
+      <label htmlFor="ItemName" className="modal__label">
         Name{" "}
         <input
           type="text"
-          id="name"
+          id="ItemName"
           placeholder="Name"
           className="modal__input"
           value={name}

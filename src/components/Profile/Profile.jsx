@@ -15,7 +15,6 @@ export function Profile({
     <div className="profile">
       <section className="profile__sidebar">
         <SideBar
-          isLoggedIn={isLoggedIn}
           handleEditProfileClick={handleEditProfileClick}
           handleLogout={handleLogout}
         />

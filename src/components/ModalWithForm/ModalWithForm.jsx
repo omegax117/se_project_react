@@ -7,6 +7,8 @@ export function ModalWithForm({
   closeActiveModal,
   isOpen,
   onSubmit,
+  switchTitle,
+  switchModal,
 }) {
   return (
     <div className={`modal ${isOpen ? "modal_opened" : ""}`}>
@@ -20,9 +22,22 @@ export function ModalWithForm({
         />
         <form className="modal__form" onSubmit={onSubmit}>
           {children}
-          <button className="modal__submit" type="submit">
-            {ButtonText}
-          </button>
+          <div>
+            <button className="modal__submit" type="submit">
+              {ButtonText}
+            </button>
+            {switchTitle ? (
+              <button
+                type="button"
+                onClick={switchModal}
+                className="modal__alt"
+              >
+                or {switchTitle}
+              </button>
+            ) : (
+              ""
+            )}
+          </div>
         </form>
       </div>
     </div>
