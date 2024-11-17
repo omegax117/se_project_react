@@ -104,15 +104,10 @@ function App() {
         if (data.token) {
           setToken(data.token);
           setIsLoggedIn(true);
-          auth
-            .getUser(data.token)
-            .then((user) => {
-              setUserData(user);
-            })
-            .finally(() => {
-              navigate("/profile");
-              closeActiveModal();
-            });
+          auth.getUser(data.token).then((user) => {
+            setUserData(user);
+            navigate("/profile");
+          });
         }
       });
     };
@@ -132,7 +127,6 @@ function App() {
       return auth.editProfile({ name, avatar }, jwt).then(() => {
         setIsLoggedIn(true);
         setUserData((prevUser) => ({ ...prevUser, name, avatar }));
-        closeActiveModal();
         navigate("/profile");
       });
     };
@@ -144,7 +138,6 @@ function App() {
     const makeRequest = () => {
       return postItem(values, jwt).then((res) => {
         setClothingItems([res.data, ...clothingItems]);
-        closeActiveModal();
       });
     };
     loadSubmit(makeRequest);
@@ -157,7 +150,6 @@ function App() {
           return item._id !== selectedCard._id ? item : null;
         });
         setClothingItems(newClothingItems);
-        closeActiveModal();
       });
     };
     loadSubmit(makeRequest);
