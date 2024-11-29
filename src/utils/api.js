@@ -1,6 +1,6 @@
 export const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "api.lastsprint.crabdance.com"
+    ? "https://api.lastsprint.crabdance.com"
     : "http://localhost:3001";
 export const headers = {
   Accept: "application/json",
